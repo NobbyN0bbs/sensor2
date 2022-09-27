@@ -1,9 +1,9 @@
 basic.forever(function () {
     SCD40.start_continuous_measurement()
-    basic.showString("CO2")
+    basic.showString("C")
     basic.showString("" + Math.round(SCD40.get_co2()))
-    basic.showString("TEMP")
+    basic.showString("T")
     basic.showString("" + Math.round(SCD40.get_temperature(SCD40.SCD40_T_UNIT.C) * 10) / 10)
-    basic.showString("HUM")
+    basic.showString("H")
     basic.showString("" + Math.round(SCD40.get_relative_humidity()))
 })
